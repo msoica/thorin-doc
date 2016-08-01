@@ -1,5 +1,5 @@
 'use strict';
 module.exports = {
-  "cdn": "https://thorinjs.com",
+  "cdn": "/",
   "transport.http.port": 13000
 };
