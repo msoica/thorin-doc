@@ -1,4 +1,3 @@
-<div class="padding-top"></div>
 <div class="divider"></div>
 <h5 class="padding-top">Do you have a question or is something missing?</h5>
 <p class="padding-top" style="margin-bottom: 16px;">

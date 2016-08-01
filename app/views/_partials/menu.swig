@@ -43,6 +43,7 @@
                {{ menuItem('The Middleware', 'core.middleware') }}
                {{ menuItem('The Authorization', 'core.authorization') }}
                {{ menuItem('Utilities', 'core.util') }}
+               {{ menuItem('Libraries', 'core.libraries') }}
             </ul>
          </div>
          <div class="doc-menu {% if intent.action.indexOf('interface') == 0 %}doc-visible{% endif %}">

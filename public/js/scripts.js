@@ -18,6 +18,7 @@ jQuery(document).ready(function($) {
   $(document).on('click', 'a[href=#]', function(e) {
     e.preventDefault();
   });
+  hljs.initHighlightingOnLoad();
 
 	// Toggle menu
 	$(".doc-menu:not(.no-items) .widget-title").on('click', function(e) {

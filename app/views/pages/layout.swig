@@ -15,8 +15,9 @@
    <link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16" />
    <link rel="icon" href="/favicon.ico" type="image/x-icon">
    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-   <link href="{{ asset('/css/vendor/pixeden.css') }}" rel="stylesheet" media="screen">
    <link href="{{ asset('/css/styles.min.css', true) }}" rel="stylesheet" media="screen">
+   <link href="{{ asset('/css/vendor/pixeden.css') }}" rel="stylesheet" media="screen">
+   <link href="{{ asset('/css/vendor/highlight.css', true) }}" rel="stylesheet" media="screen">
 </head>
 <body>
 {% include "../_partials/track.swig" %}
@@ -43,6 +44,7 @@
    <script src="{{ asset('/js/vendor/velocity.min.js') }}"></script>
    <script src="{{ asset('/js/vendor/magnific-popup.min.js') }}"></script>
    <script src="{{ asset('/js/vendor/owl.carousel.min.js') }}"></script>
+   <script src="{{ asset('/js/vendor/highlight.min.js') }}"></script>
    <script src="{{ asset('/js/scripts.js', true) }}"></script>
 
 
