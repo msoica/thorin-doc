@@ -34,8 +34,10 @@
          <div class="doc-menu {% if intent.action.indexOf('core') == 0 %}doc-visible{% endif %}">
             {{ menuTitle('Core') }}
             <ul class="doc-item">
+               {{ menuItem('Component lifecycle', 'core.lifecycle') }}
                {{ menuItem('Configuration loading', 'core.config') }}
-               {{ menuItem('Application boot', 'core.boot') }}
+               {{ menuItem('Component loading', 'core.component-load') }}
+               {{ menuItem('Component accessing', 'core.component-access') }}
                {{ menuItem('Loggers', 'core.loggers') }}
                {{ menuItem('The Dispatcher', 'core.dispatcher') }}
                {{ menuItem('The Action', 'core.action') }}

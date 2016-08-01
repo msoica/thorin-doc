@@ -22,6 +22,7 @@
 <body>
 {% include "../_partials/track.swig" %}
 {% include "../_partials/header.swig" %}
+{% import "../_partials/macro.swig" as macro %}
 <div class="page-wrapper">
    <section class="container main-app">
       <div class="row">
@@ -46,7 +47,6 @@
    <script src="{{ asset('/js/vendor/owl.carousel.min.js') }}"></script>
    <script src="{{ asset('/js/vendor/highlight.min.js') }}"></script>
    <script src="{{ asset('/js/scripts.js', true) }}"></script>
-
 
 </div>
 </body>

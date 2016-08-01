@@ -3,3 +3,4 @@ node_modules
 .idea
 .thorin
 public/**/*.html
+public/css/styles.min.css
