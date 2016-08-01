@@ -1,0 +1,153 @@
+.footer>.container>.row>.col-lg-4>a:last-child{border-bottom:1px solid #575757; }
+.small-get-started { border-top: 1px solid #414141; }
+.footer>.container>.row>.col-lg-4{margin-bottom:20px;}
+@media (max-width: $screen-md) {
+  .footer>.container>.row>.col-lg-4{margin-bottom:80px;}
+}
+@media (min-width: $screen-md) {
+  .main-navigation.submenu-slideDown .mobile-only {
+    display: none !important;
+  }
+}
+
+@media #{$tablet-land} {
+  aside.sidebar {
+    border-right: none !important;
+    border-bottom: 1px solid $gray-light;
+    margin-bottom: 32px;
+    max-width: 100% !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main-app {
+    margin-left: 16px;
+    margin-right: 16px;
+    max-width: calc(100% - 32px);
+  }
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+.unloq-login {
+  margin: 0 auto 32px auto;
+}
+select {
+  cursor: pointer;
+}
+
+
+.form-checkbox {
+  line-height: 24px;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.form-checkbox input{
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+.form-checkbox label {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0;
+  margin-left: 8px;
+  top: -4px;
+}
+.pricing-tooltip .tooltip .tooltip-inner{
+  max-width: 300px !important;
+  white-space: normal !important;
+}
+.pricing-tooltip .fa-info-circle {
+  cursor: help;
+}
+.btn-ghost-white:hover {
+  background-color: rgba(0,0,0,0.1);
+  color: #000000;
+}
+
+.doc-current,
+.doc-current a {
+  font-weight: bold;
+  color: $brand-primary !important;
+}
+.doc-menu {
+  margin-bottom: 8px;
+  a {
+    text-decoration: none;
+    color: $gray-dark;
+    @include transition(none);
+    &:hover {
+      color: $gray-darker !important;
+    }
+  }
+
+  .widget-title:hover,
+  .widget-title a:hover {
+    color: $gray-darker;
+  }
+  .widget-title, .widget-title a {
+    color: $menu-title;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .widget-title {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    cursor: pointer;
+    padding: 6px 0;
+  }
+  &.doc-visible {
+    .widget-title:after {
+      display: block;
+      content: '';
+      width: 32px;
+      height: 2px;
+      background-color: $brand-primary;
+      margin-top: 2px;
+    }
+    .doc-item {
+      display: block;
+      margin-top: 4px;
+      padding-left: 16px;
+      margin-bottom: 16px;
+      .cat-item {
+        line-height: 20px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+  &.api-reference {
+    .cat-item {
+      margin-bottom: 2px;
+    }
+  }
+  .doc-item {
+    display: none;
+    padding-left: 0;
+    li, a {
+      line-height: 22px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      color: $menu-item;
+    }
+  }
+  .sub-header {
+    text-transform: uppercase;
+    color: #afafaf;
+    font-size: 14px;
+    margin: 8px 8px 8px 0;
+  }
+}
+
+.tip {
+  font-size: 14px;
+  color: $gray-dark;
+  &.light {
+    color: lighten($gray-dark, 25%);
+  }
+}

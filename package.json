@@ -1,0 +1,22 @@
+{
+  "name": "thorin-docs",
+  "version": "1.0.5",
+  "private": true,
+  "scripts": {
+    "setup": "node app.js --setup=all",
+    "build": "npm update && node app.js --env=production --compile=true",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "nunjucks": "^2.4.2",
+    "thorin": "^1.x",
+    "thorin-plugin-docs": "^1.x",
+    "thorin-plugin-render": "^1.x",
+    "thorin-plugin-sass": "^1.x",
+    "thorin-plugin-static-html": "^1.x",
+    "thorin-transport-http": "^1.x"
+  },
+  "engines": {
+    "node": ">= 4.x"
+  }
+}

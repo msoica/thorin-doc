@@ -1,0 +1,28 @@
+//
+// Social Buttons
+// --------------------------------------------------
+
+/* Base class */
+.social-bar {
+	display: table;
+	@include clearfix;
+	a {
+		display: block;
+		float: left;
+		width: $social-btn-size;
+		font-size: $font-size-base;
+		color: $social-btn-color;
+		line-height: $social-btn-size - 7;
+		text-align: center;
+		text-decoration: none;
+		letter-spacing: 0;
+		border: 1px solid $social-btn-border-color;
+		margin-right: -1px;
+		margin-bottom: -1px;
+		@include transition(color .3s);
+		&:hover { color: $social-btn-hover-color; }
+	}
+}
+.text-center {
+	.social-bar { margin: auto; }
+}

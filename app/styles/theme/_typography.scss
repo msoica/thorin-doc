@@ -1,0 +1,322 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: $headings-line-height;
+  color: $headings-color;
+  font-weight: $headings-font-weight;
+  margin-top: 0;
+}
+h1 { margin-bottom: $line-height-computed; }
+h1, h2 { line-height: 1.2; }
+h2, h3, h4 {
+  margin-bottom: floor($line-height-computed / 1.5);
+  font-weight: bold;
+}
+h5, h6 {
+  margin-bottom: floor($line-height-computed / 2);
+  font-weight: bold;
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 {
+  font-size: $font-size-h3;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: $font-size-h4;
+  font-weight: 300;
+}
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+// Responsive Headings
+@media #{$desktop} {
+  h1 { font-size: floor($font-size-h1 * 0.9); }
+}
+@media #{$tablet-land} {
+  h1 { font-size: floor($font-size-h1 * 0.8); }
+  h2 { font-size: floor($font-size-h2 * 0.9); }
+}
+@media #{$tablet-port} {
+  h1 { font-size: floor($font-size-h1 * 0.7); }
+  h2 { font-size: floor($font-size-h2 * 0.8); }
+}
+
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 $line-height-computed;
+}
+.lead {
+  font-size: $font-size-lead;
+  margin-bottom: $line-height-computed;
+}
+.text-sm {
+  font-size: $font-size-small;
+}
+.text-xs {
+  font-size: $font-size-xs;
+  font-weight: normal;
+}
+small,
+.small { font-size: 90%; }
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+.text-notransform     { text-transform: none; }
+
+// Font Weight
+.text-extrabold { font-weight: 900 !important; }
+.text-bold { font-weight: bold !important; }
+.text-normal { font-weight: normal !important; }
+.text-thin { font-weight: 300 !important; }
+
+// Contextual colors
+.text-muted { color: $gray !important; }
+.text-light,
+.text-white {
+  color: #fff !important;
+  h1, h2, h3, h4, h5, h6 { color: #fff !important; }
+}
+
+// Contextual colors
+@include text-emphasis-variant('.text-primary', $brand-primary);
+@include text-emphasis-variant('.text-success', $brand-success);
+@include text-emphasis-variant('.text-info', $brand-info);
+@include text-emphasis-variant('.text-warning', $brand-warning);
+@include text-emphasis-variant('.text-danger', $brand-danger);
+
+// Contextual backgrounds
+.bg-default,
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger {
+  color: #fff;
+}
+@include bg-variant('.bg-default', $brand-default);
+@include bg-variant('.bg-primary', $brand-primary);
+@include bg-variant('.bg-success', $brand-success);
+@include bg-variant('.bg-info', $brand-info);
+@include bg-variant('.bg-warning', $brand-warning);
+@include bg-variant('.bg-danger', $brand-danger);
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: $line-height-computed;
+  line-height: 1.8;
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+ol { padding-left: 26px; }
+
+// List options
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-unstyled {
+  @include list-unstyled;
+}
+.featured-list {
+  list-style: none;
+  padding: 0;
+  li {
+    position: relative;
+    padding-left: 40px;
+    color: $gray-dark;
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 25px;
+      height: 2px;
+      left: 0;
+      top: 15px;
+      background-color: $brand-primary;
+      margin-right: 15px; 
+    }
+  }
+  &.text-light {
+    li {
+      color: #fff;
+      &:before { background-color: #fff; }
+    }
+  }
+}
+.text-light {
+  .featured-list li {
+    color: #fff;
+    &:before { background-color: #fff; }
+  }
+}
+.fa-ul { color: $gray-dark; }
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled;
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: $line-height-computed;
+}
+dt,
+dd {
+  line-height: $line-height-base;
+}
+dt {
+  color: $headings-color;
+  font-weight: bold;
+}
+dd {
+  margin-left: 0; // Undo browser default
+  margin-bottom: 15px; 
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+.dl-horizontal {
+  dd {
+    @include clearfix; // Clear the floated `dt` if an empty `dd` is present
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    dt {
+      float: left;
+      width: ($dl-horizontal-offset - 20);
+      clear: left;
+      text-align: right;
+      @include text-overflow;
+    }
+    dd {
+      margin-left: $dl-horizontal-offset;
+    }
+  }
+}
+
+
+// Misc
+// -------------------------
+// Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  @extend .text-uppercase;
+}
+
+// Blockquotes
+blockquote {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: floor($line-height-computed * 1.2);
+  text-align: center !important;
+  color: $quote-font-color;
+
+  cite {
+    display: block;
+    font-size: $font-size-base;
+    font-weight: bold;
+    color: $headings-color;
+    font-style: normal;
+    span {
+      display: block;
+      font-size: $font-size-base;
+      font-weight: 300;
+      font-style: italic;
+      margin-top: 6px;
+    }
+  }
+  p {
+    position: relative;
+    font-size: $quote-font-size;
+    font-weight: 300;
+    padding: 0 72px;
+    margin-bottom: floor($line-height-computed / 1.5);
+    &:before,
+    &:after {
+      position: absolute;
+      display: block;
+      content: "\201C";
+      color: $quote-font-color;
+      opacity: .1;
+      font-size: 120px;
+      font-weight: 900;
+      line-height: 1;
+      top: 50%;
+      margin-top: -45px;
+    }
+    &:after {
+      right: 0;
+      content: "\201D";
+    }
+    &:before { left: 0; }
+  }
+  @media #{$mobile-land} {
+    p { padding: 0 60px; }
+    p:before, p:after { font-size: 100px; }
+  }
+
+  // Light Skin
+  &.light-skin {
+    color: #fff;
+    cite {
+      color: #fff;
+      opacity: .9;
+    }
+    p:before, p:after {
+      color: #fff;
+      opacity: .15;
+    }
+  }
+}
+
+// Addresses
+address {
+  margin-bottom: $line-height-computed;
+  font-style: normal;
+  line-height: $line-height-base;
+}
