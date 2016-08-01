@@ -8,6 +8,7 @@ module.exports = {
     }]
   },
   "plugin.static-html": {
+    autorun: false,
     output: thorin.root + '/public',
     sitemap: {
       domain: 'thorinjs.com'
