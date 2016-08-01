@@ -15,6 +15,7 @@
    <link href="{{ asset('/css/vendor/pixeden.css') }}" rel="stylesheet" media="screen">
    <link href="{{ asset('/css/styles.min.css', true) }}" rel="stylesheet" media="screen">
 </head>
+
 <body class="error404 light-skin">
 {% include "./_partials/track.swig" %}
 <div class="page-wrapper">
