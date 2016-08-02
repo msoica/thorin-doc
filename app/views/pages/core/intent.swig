@@ -35,7 +35,19 @@
       "status": 400  // the status code of the error.
    }
 }</code></pre>
-
+      <p>
+         The core intent class is under <code>thorin.Intent</code> and can be extended by other thorin components, using the
+         pattern below:
+      </p>
+      <pre><code class="javascript">'use strict';
+const CoreIntent = thorin.Intent;
+thorin.Intent = class ThorinIntent extends CoreIntent {
+   constructor(name) {
+      super(name);
+      // your custom functionality
+   }
+}
+</code></pre>
       <h5 class="padding-top">Functionality</h5>
       <div class="function">
          <h6>Properties</h6>

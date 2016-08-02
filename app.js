@@ -44,4 +44,5 @@ thorin.run((err) => {
   }
   thorin.logger.enableConsole();
   log.info(`Thorin.js documentation server listening on http://localhost:${thorin.config('transport.http.port')}`);
+  console.log(thorin.util.encrypt("MYKEY", thorin.util.randomString(32), true));
 });

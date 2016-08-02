@@ -40,6 +40,7 @@
                {{ menuItem('Component accessing', 'core.component-access') }}
                {{ menuItem('Loggers', 'core.loggers') }}
                {{ menuItem('The Dispatcher', 'core.dispatcher') }}
+               {{ menuItem('The Validator', 'core.validator') }}
                {{ menuItem('The Action', 'core.action') }}
                {{ menuItem('The Intent', 'core.intent') }}
                {{ menuItem('The Middleware', 'core.middleware') }}

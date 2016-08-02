@@ -15,6 +15,19 @@
          sent out to be processed. An intent can be viewed as both the <code>req</code> and the <code>res</code> objects of
          a regular express app.
       </p>
+      <p>
+         The core action class is under <code>thorin.Action</code> and can be extended by other thorin components, using the
+         pattern below:
+      </p>
+      <pre><code class="javascript">'use strict';
+const CoreAction = thorin.Action;
+thorin.Action = class ThorinAction extends CoreAction {
+   constructor(name) {
+      super(name);
+      // your custom functionality
+   }
+}
+</code></pre>
       <h5 class="padding-top">Functionality</h5>
       <p>
          The core thorin intent implements the functions below. However, keep in mind that some plugins can <b>extend</b>
