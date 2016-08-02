@@ -44,6 +44,4 @@ thorin.run((err) => {
   }
   thorin.logger.enableConsole();
   log.info(`Thorin.js documentation server listening on http://localhost:${thorin.config('transport.http.port')}`);
-  const pLogger = thorin.logger('payment');
-  pLogger.info(`This is my payment logger`);   // outputs
 });
