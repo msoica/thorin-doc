@@ -11,15 +11,15 @@
                <img src="{{ asset('/img/logo-unloq.png') }}" alt="UNLOQ Systems LTD">
             </a>
             <div class="social-bar">
-               <a href="https://twitter.com/thorinjs" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+               <a target="_blank" href="https://twitter.com/thorinjs" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
                   <i class="fa fa-twitter"></i>
                </a>
-               <a href="https://github.com/thorinjs" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Github">
+               <a target="_blank" href="https://github.com/thorinjs" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Github">
                   <i class="fa fa-github"></i>
                </a>
             </div>
             <div class="copyright">
-               <p>2016 &copy; <a href="/">UNLOQ Systems LTD.</a></p>
+               <p>Created by <a href="/">UNLOQ Systems LTD</a> under the MIT License</p>
             </div>
          </div>
       </div>
