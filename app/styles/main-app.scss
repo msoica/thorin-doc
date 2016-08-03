@@ -1,15 +1,19 @@
 body {
   margin: 0;
 }
+
 .page-wrapper {
   padding-top: 97px;
 }
+
 ul.numbered {
   list-style-type: decimal;
 }
+
 ul.arguments {
-  list-style-type:square;
+  list-style-type: square;
 }
+
 .function {
   position: relative;
   padding-top: 8px;
@@ -32,6 +36,9 @@ ul.arguments {
   .notes {
     font-weight: 400;
     font-size: 14px;
+    ul {
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -112,10 +119,12 @@ ul.arguments {
     margin-bottom: 8px;
   }
 }
+
 .top-header {
   font-weight: 100;
 }
-.doc-menu ul{
+
+.doc-menu ul {
   margin-top: 8px;
   margin-bottom: 32px;
 }

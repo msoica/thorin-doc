@@ -86,7 +86,7 @@
             </ul>
          </div>
          <div class="doc-menu {% if intent.action.indexOf('store') == 0 %}doc-visible{% endif %}">
-            {{ menuTitle('Stores', 'store.index') }}
+            {{ menuTitle('Stores') }}
             <ul class="doc-item">
                {{ menuItem('SQL', 'store.sql') }}
                {{ menuItem('Redis', 'store.redis') }}
