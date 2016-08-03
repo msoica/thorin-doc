@@ -79,7 +79,7 @@
             </ul>
          </div>
          <div class="doc-menu {% if intent.action.indexOf('transport') == 0 %}doc-visible{% endif %}">
-            {{ menuTitle('Transports', 'transport.index') }}
+            {{ menuTitle('Transports') }}
             <ul class="doc-item">
                {{ menuItem('HTTP', 'transport.http') }}
                {{ menuItem('Websocket', 'transport.ws') }}

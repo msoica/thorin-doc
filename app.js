@@ -43,9 +43,5 @@ thorin.run((err) => {
     });
   }
   thorin.logger.enableConsole();
-  var a = thorin.sanitize('ARRAY', "{q},{},3", {
-    parse: true
-  });
-  console.log(a);
   log.info(`Thorin.js documentation server listening on http://localhost:${thorin.config('transport.http.port')}`);
 });

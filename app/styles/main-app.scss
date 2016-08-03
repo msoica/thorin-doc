@@ -44,9 +44,11 @@ ul.arguments {
   padding-left: 24px;
   border-left: 1px solid rgba($brand-primary, 0.2);
   li {
+    padding-left: 24px;
     line-height: 1.35;
   }
   b {
+    margin-left: -24px;
     font-weight: 500;
     color: darken($brand-primary, 10%);
   }
