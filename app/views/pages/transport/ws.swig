@@ -4,8 +4,8 @@
 {% block content %}
    <div class="post-item">
       <h2 class="post-title">
-         thorin-transport-ws
          {{ macro.gitIcon('https://github.com/Thorinjs/Thorin-transport-ws') }}
+         thorin-transport-ws
       </h2>
       <p>
          WebSocket Transport layer that (currently) works with the HTTP transport to handle websocket connections. Internally,

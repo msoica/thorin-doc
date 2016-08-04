@@ -20,6 +20,9 @@ ul.arguments {
   padding-left: 16px;
   padding-bottom: 8px;
   margin-bottom: 16px;
+  &.plain {
+    border-top: 0;
+  }
   border-top: 1px solid rgba($brand-primary, 0.3);
   h6 {
     margin: 0;
@@ -50,7 +53,7 @@ ul.arguments {
   padding-bottom: 8px;
   padding-left: 24px;
   border-left: 1px solid rgba($brand-primary, 0.2);
-  li {
+  > li {
     padding-left: 24px;
     line-height: 1.35;
   }
@@ -92,6 +95,9 @@ ul.arguments {
   .post-title {
     margin-bottom: 48px;
     margin-top: 24px;
+    .fa-github {
+      margin-left: 6px;
+    }
   }
 
   h5 {
