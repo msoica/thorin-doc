@@ -5,7 +5,7 @@
    <div class="post-item">
       <h2 class="post-title">
          {{ macro.gitIcon('https://github.com/Thorinjs/Thorin-store-redis') }}
-         thorin-store-redis
+         store-redis
       </h2>
       <p>
          The Redis store is a wrapper over <a href="https://npmjs.com/package/redis" target="_blank">redis</a> that provides
@@ -15,14 +15,14 @@
       <h5>Installation and usage</h5>
       <pre><code class="bash">npm i --save thorin-store-redis@1.x</code>
 <code class="javascript">'use strict';
-   // app.js entry file
-   const thorin = require('thorin');
+// app.js entry file
+const thorin = require('thorin');
 
-   thorin.addStore(require('thorin-store-redis'));   // <- add this line
-   thorin.run((err) => {});
+thorin.addStore(require('thorin-store-redis'));   // <- add this line
+thorin.run((err) => {});
 </code>
 <code class="bash"># run to setup the database and module
-   node app.js --setup=store.redis
+node app.js --setup=store.redis
 </code></pre>
 
       <h5 class="padding-top">Default configuration</h5>

@@ -5,7 +5,7 @@
    <div class="post-item">
       <h2 class="post-title">
          {{ macro.gitIcon('https://github.com/Thorinjs/Thorin-store-http') }}
-         thorin-store-sql
+         store-sql
       </h2>
       <p>
          The SQL store is a wrapper over <a href="http://docs.sequelizejs.com/en/latest/" target="_blank">sequelize</a> that

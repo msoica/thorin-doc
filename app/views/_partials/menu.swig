@@ -94,7 +94,7 @@
             </ul>
          </div>
          <div class="doc-menu {% if intent.action.indexOf('plugin') == 0 %}doc-visible{% endif %}">
-            {{ menuTitle('Plugins', 'plugin.index') }}
+            {{ menuTitle('Plugins') }}
             <ul class="doc-item">
                {{ menuHeader('Authentication') }}
                {{ menuItem('Auth-password', 'plugin.auth-password') }}

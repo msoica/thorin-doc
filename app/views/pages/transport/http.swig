@@ -5,7 +5,7 @@
    <div class="post-item">
       <h2 class="post-title">
          {{ macro.gitIcon('https://github.com/Thorinjs/Thorin-transport-http') }}
-         thorin-transport-http
+         transport-http
       </h2>
       <p>
          HTTP Transport layer that wraps over <i>express@4.x</i> and abstracts away any transport-related information.
