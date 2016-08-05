@@ -48,7 +48,44 @@ function readFile(fpath) {
 </code></pre>
          </div>
       </div>
-
+      <div class="function">
+         <h6>thorin.app</h6>
+         <div class="desc">The name (or type) of your application. This is useful when running multiple microservices, as this value
+            should be used as the microservice type. By default, it will use the name of the launch file
+         </div>
+         <div class="notes">
+            <code>app.js</code> -> <code>thorin.app = "app"</code><br/>
+            <code>mailer.js</code> -> <code>thorin.app = "mailer"</code>
+         </div>
+      </div>
+      <div class="function">
+         <h6>thorin.id</h6>
+         <div class="desc">The unique ID of your application, generated the first time you launched it. This setting persists
+            over process restarts, it and other app options are stored under <code>config/.thorin</code>.
+         </div>
+         <div class="notes">
+            Since you might want your application to run in a cluster mode or multiple instance, the id will help you differentiate
+            the processes
+         </div>
+      </div>
+      <div class="function">
+         <h6>thorin.root</h6>
+         <div class="desc">The root directory of the application, usually where your <code>app.js</code> entry file stants.
+            This setting is used by most components, therefore it should not be manually changed.         
+         </div>
+      </div>
+      <div class="function">
+         <h6>thorin.version</h6>
+         <div class="desc">When the application launched, Thorin gathers information about the project, looking into the <code>package.json</code>
+            file. Changing the <code>version</code> key in your package.json will update your application version.
+         </div>
+      </div>
+      <div class="function">
+         <h6>thorin.package</h6>
+         <div class="desc">
+            This holds the information contained in the package.json file, parsed and ready to be accessed.
+         </div>
+      </div>
       <div class="function">
          <h6>thorin.util.randomString(length, onlyAlpha) : string</h6>
          <div class="desc">Synchronously generates a cryptographically safe random string using the specified length</div>

@@ -13,6 +13,7 @@ thorin
 let isCompiling = thorin.argv('compile');
 if (isCompiling) {
   thorin.addPlugin(require('thorin-plugin-static-html'));
+  thorin.version = thorin.version + thorin.util.randomString(8);
 }
 if (thorin.env === 'production') thorin.logger.disableConsole();
 
