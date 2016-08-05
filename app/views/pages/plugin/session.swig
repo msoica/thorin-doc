@@ -3,9 +3,12 @@
 
 {% block content %}
    <div class="post-item">
-      <h2 class="post-title"></h2>
+      <h2 class="post-title">
+         {{ macro.gitIcon('https://github.com/Thorinjs/Thorin-plugin-session') }}
+         plugin-session
+      </h2>
       <p>
-
+         Documentation will be available shortly
       </p>
    </div>
 {% endblock %}
