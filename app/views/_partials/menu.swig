@@ -29,6 +29,7 @@
                {{ menuItem('Features', 'welcome.features') }}
                {{ menuItem('Concepts', 'welcome.concepts') }}
                {{ menuItem('Getting started', 'welcome.getting-started') }}
+               {{ menuItem('Resources', 'welcome.resources') }}
             </ul>
          </div>
          <div class="doc-menu {% if intent.action.indexOf('core') == 0 %}doc-visible{% endif %}">
