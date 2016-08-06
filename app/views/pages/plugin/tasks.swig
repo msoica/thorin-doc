@@ -8,7 +8,11 @@
          plugin-tasks
       </h2>
       <p>
-         Documentation will be available shortly
+         The tasks plugin is used to register functionality to be executed at specific points in time,
+         recurring or not. This plugin is useful for a worker-like microservice that can process items in the background.
+      </p>
+      <p>
+         To-be-completed
       </p>
    </div>
 {% endblock %}
