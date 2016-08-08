@@ -61,8 +61,32 @@ node app.js --setup=transport.http</code></pre>
             <b>options.payloadLimit</b><span class="type">50000</span> The maximum size of any incoming request payload.
             If you're expecting large payloads, you should consider changing this to the appropriate value.
          </li>
-         {# TODO: add helmet headers #}
+         <li>
+            <b>helmet</b><span class="type">object</span>helmet security HTTP header configuration.
+         </li>
       </ul>
+      <div class="notes">
+         The HTTP application comes with the default helmet configuration bellow. For a complete configuration view, visit
+         <a href="https://github.com/helmetjs/helmet" target="_blank">the official docs</a>.<br/>
+         <pre><code class="json">{
+   frameguard: false,
+   xssFilter: {
+      setOnOldIE: true
+   },
+   contentSecurityPolicy: {
+      browserSniff: true,
+      disableAndroid: false,
+      setAllHeaders: false
+   },
+   dnsPrefetchControl: {
+      allow: false
+   },
+   hsts: false,
+   ieNoOpen: true,
+   noCache: false,
+   hpkp: false
+}</code></pre>
+      </div>
 
       <h5 class="padding-top">Extended Thorin.Action</h5>
       <div class="function">
