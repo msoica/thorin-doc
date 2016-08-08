@@ -87,6 +87,16 @@ node app.js --setup=transport.http</code></pre>
    hpkp: false
 }</code></pre>
       </div>
+      <h5 class="padding-top">Making requests to your server</h5>
+      <p>
+         The easiest and fastest way to make requests to your server is by doing <code>POST</code> requests to your <code>/dispatch</code> endpoint.
+         Since you define <i>actions</i>, you can call them (almost like a RPC) in a redux-friendly way.
+      </p>
+      <pre><code class="bash">curl -H "Content-Type: application/json" \
+     -X POST \
+     -d '{"type": "{yourActionName}", "payload": {"yourInput": "payload", "asAn": "object"}}' \
+     http://localhost:3000</code></pre>
+
 
       <h5 class="padding-top">Extended Thorin.Action</h5>
       <div class="function">
