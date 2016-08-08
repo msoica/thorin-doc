@@ -1,5 +1,5 @@
 {% extends "../layout.swig" %}
-{% set title = "Thorin.js" %}
+{% set title = "Thorin.js - tasks plugin" %}
 
 {% block content %}
    <div class="post-item">
@@ -11,6 +11,11 @@
          The tasks plugin is used to register functionality to be executed at specific points in time,
          recurring or not. This plugin is useful for a worker-like microservice that can process items in the background.
       </p>
+      <p>
+         By default, the plugin will create the folder <b>app/tasks</b> where you should save all your task definitions.
+         They will be automatically loaded and registered by the application.
+      </p>
+
       <h5>Installation and usage</h5>
       <pre><code class="bash">npm i --save thorin-plugin-tasks@1.x</code>
 <code class="javascript">'use strict';
@@ -111,7 +116,61 @@ node app.js --setup=plugin.tasks
             <li>
                <b>opt.on</b><span class="type">string, month-start, month-end</span>the date when the task should be executed. Currently only month-start and month-end.
             </li>
+            <li>
+               <b>opt.timeout</b><span class="type">string</span>how much time to pass before we consider the action timed out and failed
+            </li>
          </ul>
+         <div class="notes">
+            Time representation has the <code>hh:mm:ss</code> format or <code>{days}d {hours}h {minutes}m {seconds}s</code> and can be found below:<br/>
+            <code>delay: '2m'</code> delays next execution by 2 minutes<br/>
+            <code>timer: '10s'</code> executes the task every 10 seconds<br/>
+            <code>at: '10:30'</code> executes the task every day at 10:30<br/>
+            <code>timer: '2h30m'</code> executes the task every 2 hours and 10 minutes
+         </div>
+      </div>
+      <div class="function">
+         <h6>entryObj.handle(event, fn)</h6>
+         <div class="desc">
+            Registers a callback handler for the given task event. Task events ara explained bellow
+         </div>
+         <ul class="arguments">
+            <li>
+               <code>failed</code> - triggered when the task has encountered an error.
+            </li>
+            <li>
+               <code>completed</code> - triggered when the task has completed all its scheduled actions.
+            </li>
+            <li>
+               <code>timeout</code> - triggered when the action failed to complete before the given timeout period
+            </li>
+            <li>
+               <code>stop</code> - triggered when the action was programatically stopped from the context.
+            </li>
+         </ul>
+      </div>
+      <div class="function">
+         <h6>entryObj.start(delay)</h6>
+         <div class="desc">
+            Manually start the task's scheduled actions.
+         </div>
+      </div>
+      <div class="function">
+         <h6>entryObj.stop()</h6>
+         <div class="desc">
+            Stops the task from executing any further.
+         </div>
+      </div>
+      <div class="function">
+         <h6>entryObj.runAction(name)</h6>
+         <div class="desc">
+            Manually runs the given action name with an empty context, internal function.
+         </div>
+      </div>
+      <div class="function">
+         <h6>entryObj.createContext(names, opt)</h6>
+         <div class="desc">
+            Creates a new context and runs it through the specified actions, internal function.
+         </div>
       </div>
 
 
@@ -120,5 +179,74 @@ node app.js --setup=plugin.tasks
          You use the task context to attach context-specific information about your
          currently running task.
       </p>
+      <div class="function">
+         <h6>contextObj.took() : Number</h6>
+         <div class="desc">
+            Returns the number of milliseconds the context was active
+         </div>
+      </div>
+      <div class="function">
+         <h6>contextObj.stop()</h6>
+         <div class="desc">
+            Stops the context from running further. Any action that was scheduled to run after this, will no longer do so.
+         </div>
+      </div>
+      <div class="function">
+         <h6>contextObj.delay(sec)</h6>
+         <div class="desc">
+            Delays the next execution of the task with the given number of seconds.
+         </div>
+      </div>
+
+      <h5 class="padding-top">Example</h5>
+      <pre>
+<code class="javascript">'use strict';
+const taskPlugin = thorin.plugin('tasks');
+const myTask = taskPlugin.addTask('my.task.right.here');
+
+myTask
+   .prepare((context) => {
+      // Set any context information.
+      context.items = [];
+      context.processed = 0;
+   })
+   .action('dequeue', (context) => {   // Return a promise to signal the action completion.
+      return new Promise((resolve, reject) => {
+         log.info('Should dequeue');
+         context.items.push("myItem");
+         resolve();
+      });
+   })
+   .action('process', (context) => {   // If returns undefined, go to next action automatically.
+      if(context.items.length === 0) return;
+      context.items.forEach((item) => {
+         log.info('Processing item ', item);
+         context.processed++;
+      });
+   })
+   .action('release', (context) => {
+      if(context.processed === 0) return;
+      log.info('Releasing items');
+      context.items = [];
+   });
+// Schedule the way our actions will be executed and when
+myTask.schedule([
+   'dequeue',
+   'process',
+   'release'
+], {
+   delay: '2s',
+   timer: '40s',
+   timeout: '30s'
+});
+// Listen for any events.
+myTask
+   .handle('completed', (context) => {
+      log.info('Processed: ', context.processed);
+   })
+   .handle('failed', (context, err) => {
+      log.warn(`Failed to finalize task`, err);
+   });
+</code></pre>
    </div>
 {% endblock %}

@@ -1,5 +1,5 @@
 {% extends "../layout.swig" %}
-{% set title = "Thorin.js" %}
+{% set title = "Thorin.js - Configuration" %}
 
 {% block content %}
    <div class="post-item">
@@ -13,6 +13,9 @@
       </p>
       <p>
          You can add additional configuration sources by calling the <code>thorin.addConfig(name, opt, _fn)</code> function.
+      </p>
+      <p>
+         In order to get started with <a href="https://sconfig.io">sconfig.io</a>, please follow the steps on the <a href="https://github.com/UNLOQIO/sconfig-node-client" target="_blank">official repo</a>.
       </p>
       <div class="function">
          <h6>thorin.addConfig(sourceType, options, onLoaded)</h6>

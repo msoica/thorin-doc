@@ -1,5 +1,5 @@
 {% extends "../layout.swig" %}
-{% set title = "Thorin.js" %}
+{% set title = "Thorin.js - color sanitizer" %}
 
 {% block content %}
    <div class="post-item">
