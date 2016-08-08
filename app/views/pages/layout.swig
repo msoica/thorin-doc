@@ -15,7 +15,7 @@
    <link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16" />
    <link rel="icon" href="/favicon.ico" type="image/x-icon">
    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-   <link href="{{ asset('/css/styles.min.css', true) }}" rel="stylesheet" media="screen">
+   <link href="/css/styles.min.css" rel="stylesheet" media="screen">
    <link href="{{ asset('/css/vendor/pixeden.css') }}" rel="stylesheet" media="screen">
    <link href="{{ asset('/css/vendor/highlight.css', true) }}" rel="stylesheet" media="screen">
 </head>
