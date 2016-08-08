@@ -3,7 +3,7 @@
 
 {% block content %}
    <div class="post-item">
-      <h2 class="post-title"></h2>
+      <h2 class="post-title">ANY</h2>
       <p>
          Verifies that the input data is not undefined. If specified, checks the maximum allowed size.
       </p>
