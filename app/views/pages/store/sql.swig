@@ -313,12 +313,16 @@ storeObj.transaction((t) => {
             </li>
          </ul>
          <div class="notes">
-             Custom non-sequelize types can be defined. Currently only <code>Seq.PRIMARY</code>, which proxies
-             the <code>Seq.INTEGER</code> field having <code>autoIncrement</code> and <code>primaryKey</code> set to <code>true</code>
+            Custom non-sequelize types can be defined. Current types:<br />
+            <ul>
+               <li><code>Seq.PRIMARY</code> shorthand for <i>Seq.INTEGER</i> with <code>autoIncrement, primaryKey</code> set to <code>true</code></li>
+               <li><code>Seq.UUID</code> shorthand for <i>Seq.STRING(50)</i> that generates a random key, using uuid for its <code>defaultValue</code> and automatically adds an index to your field.</li>
+            </ul>
          </div>
          <pre class="notes"><code class="javascript">// Field calls can be chained.
 modelObj
    .field('id', Seq.PRIMARY)
+   .field('uuid', Seq.UUID)
    .field('name', Seq.STRING(25), {
       defaultValue: 'JohnDow'
    })

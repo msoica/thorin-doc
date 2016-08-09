@@ -365,7 +365,10 @@ const mailerApi = thorin.fetcher('mailer');
          Thorin internally makes use of additional utility libraries. Since we do not want to duplicate dependencies, they
          will be exported under <code>thorin.util.{library}</code>
       </p>
-
+      <div class="function">
+         <h6>thorin.util.uuid</h6>
+         <div class="desc">Expose the internal dependency of <a href="https://npmjs.com/package/node-uuid" target="blank">node-uuid</a></div>
+      </div>
       <div class="function">
          <h6>thorin.util.fs</h6>
          <div class="desc">Expose the internal dependency of <a href="https://npmjs.com/package/fs-extra" target="blank">fs-extra</a></div>
