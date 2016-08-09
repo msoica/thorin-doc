@@ -11,7 +11,7 @@ module.exports = {
     autorun: false,
     output: thorin.root + '/public',
     sitemap: {
-      domain: 'thorinjs.com'
+      domain: 'https://thorinjs.com'
     }
   }
 };
