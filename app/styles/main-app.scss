@@ -57,7 +57,7 @@ ul.arguments {
     padding-left: 24px;
     line-height: 1.35;
   }
-  b {
+  b:first-child {
     margin-left: -24px;
     font-weight: 500;
     color: darken($brand-primary, 10%);

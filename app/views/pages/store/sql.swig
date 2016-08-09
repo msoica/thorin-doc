@@ -187,7 +187,7 @@ thorin.store('sql').addModel(buildModel, {
       <div class="function">
          <h6>storeObj.transaction(fn, opt)</h6>
          <div class="desc">
-            Initialize an SQL transaction that can be committed or rolled back (see <a href="see http://docs.sequelizejs.com/en/latest/docs/transactions" target="blank">more details here</a>)
+            Initialize an SQL transaction that can be committed or rolled back (see <a href="http://docs.sequelizejs.com/en/latest/docs/transactions" target="blank">more details here</a>)
          </div>
          <ul class="arguments">
             <li>
