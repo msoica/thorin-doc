@@ -5,10 +5,20 @@
    <div class="post-item">
       <h2 class="post-title">Welcome</h2>
       <p>
-         <b>Thorin.js</b> is the Node.js framework that enables you to build powerful production-ready, microservice orientated real-world applications.
-         It was designed with modularity, scalability and inter-communication in mind, enabling the developer to focus
-         on their product and architecture in stead of searching how to make things work.
+         <b>Thorin.js</b> is the Node.js framework that you can use to easily:
       </p>
+      <ul>
+         <li>Boot up a pre-configured web-server, sanitize and validate all your input</li>
+         <li>Render static HTML files using a templating engine, compile your less & sass styles</li>
+         <li>Integrate centralized logging with <a href="https://loglet.io" target="_blank">loglet.io</a></li>
+         <li>Use secure sessions in your requests, stored in redis, MySQL or file system</li>
+         <li>Use already written components for some wide-spread services (Redis, ElasticSearch, Sequelize)</li>
+         <li>Use a centralized dispatcher to handle your redux actions via HTTP or WebSockets</li>
+         <li>Schedule recurring tasks that may use a redis queue to process events</li>
+         <li>Extend the core functionality with use-case specific plugins</li>
+         <li>Integrate with <a href="https://sconfig.io" target="_blank">sconfig.io's</a> discovery system for microservice discovery & authorization</li>
+         <li>And much much more...</li>
+      </ul>
       <p>
          The bootstrapping time of an application built with Thorin is dramatically reduced, as most critical decisions
          were made by the accumulated experience on working with large scale applications over time. The project structure
