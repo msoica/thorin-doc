@@ -5,9 +5,21 @@
    <title>{{ title }}</title>
    {% block meta %}
       <meta name="description" content="Thorin.js node.js framework for microservice-oriented distributed real-world applications"/>
-      <meta name="keywords" content="nodejs node"/>
+      <meta name="keywords" content="microservice, node.js, nodejs, node, http, webserver, redis, mysql, sql, sequelize, input, middleware, authorization, authorize, framework, platform"/>
       <meta name="author" content="UNLOQ Systems LTD"/>
    {% endblock %}
+   {# Open-graph #}
+   <meta property="og:title" content="Thorin.js | The Node.js framework for real-world apps"/>
+   <meta property="og:type" content="article"/>
+   <meta property="og:image" content="https://s3.eu-central-1.amazonaws.com/unloq-io/thorin/promo.png"/>
+   <meta property="og:url" content="https://thorinjs.com"/>
+   <meta property="og:description" content="Production ready Node.js microservice-oriented modularized framework"/>
+
+   {# Twitter #}
+   <meta name="twitter:card" content="summary"/>
+   <meta name="twitter:title" content="Thorin.js | The Node.js framework for real-world apps"/>
+   <meta name="twitter:description" content="Production ready Node.js microservice-oriented modularized framework"/>
+   <meta name="twitter:image" content="https://s3.eu-central-1.amazonaws.com/unloq-io/thorin/promo.png"/>
 
    <!--SEO Meta Tags-->
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
