@@ -4,3 +4,4 @@ node_modules
 .thorin
 public/**/*.html
 public/css/styles.min.css
+public/sitemap.xml
