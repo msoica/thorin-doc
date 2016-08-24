@@ -721,7 +721,7 @@ store
          </div>
       </div>
       <div class="function plain">
-         <h6>create.send(intentObj)</h6>
+         <h6>read.send(intentObj)</h6>
          <div class="desc">
          Triggered right after the queried instance was place under the intent's <code>result</code> and ready to finalize the action.
          </div>

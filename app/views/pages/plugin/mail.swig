@@ -8,7 +8,7 @@
          plugin-mail
       </h2>
       <p>
-         The mail plugin wraps itself over the <a href="https://npmjs.com/package/nodemailer">nodemailer</a> module to easily
+         The mail plugin wraps itself over the <a href="https://npmjs.com/package/nodemailer">nodemailer</a> module to
          send out HTML templates. For the best experience, it should be used with the <b>render-plugin</b>,
          in order to define SWIG templates, render them dynamically and apply inline styling to them.
       </p>

@@ -110,7 +110,7 @@ dispatcher
       <div class="function">
          <h6>auth#unloq.logout</h6>
          <div class="desc">
-            This should be used with your <code>/uauth/logout</code> webhook, to easily enable remote logout for your users.
+            This should be used with your <code>/uauth/logout</code> webhook, enabling remote logout for your users.
             If your application is using <code>plugin-session</code>, the user's session will be automatically deleted. If not,
             a <code>sid</code> key will be placed in the intent's data object, so that you can manually invalidate the session token.
          </div>
