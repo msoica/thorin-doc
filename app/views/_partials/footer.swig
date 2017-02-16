@@ -20,6 +20,7 @@
             </div>
             <div class="copyright">
                <p>Created by <a href="/">UNLOQ Systems LTD</a> under the MIT License</p>
+               <p>Registered in England and Wales, No. 09565911</p>
             </div>
          </div>
       </div>
