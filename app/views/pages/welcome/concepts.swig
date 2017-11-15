@@ -9,19 +9,19 @@
       </p>
       <ul>
          <li>
-            It uses <a href="/transports">Transports</a> to abstract away incoming requests to your application.
+            It uses <a href="/transport/http">Transports</a> to abstract away incoming requests to your application.
             Whether it's from a web server, web socket or raw TCP socket, you shouldn't change much of your handlers to
             accommodate it.
          </li>
          <li>
-            It uses <a href="/stores">Stores</a> to manage and abstract access to data stores, in one way or another.
+            It uses <a href="/store/sql">Stores</a> to manage and abstract access to data stores, in one way or another.
          </li>
          <li>
-            It uses <a href="/sanitizers">Sanitizers</a> to verify incoming data and <i>cast</i> it to its appropriate
+            It uses <a href="/sanitize/index">Sanitizers</a> to verify incoming data and <i>cast</i> it to its appropriate
             type. You can think of them as raw functions that check if a value is of a specified type.
          </li>
          <li>
-            It uses <a href="/plugins">Plugins</a> to extend the core functionality and attach or handle additional functionality
+            It uses <a href="/plugin/auth-password">Plugins</a> to extend the core functionality and attach or handle additional functionality
          </li>
          <li>
             It uses <a href="/core/libraries">Libraries</a> to handle business logic in one place

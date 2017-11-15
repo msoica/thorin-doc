@@ -291,8 +291,8 @@ thorin.dispatcher
          the name of the service that is calling, and the <code>proxy_type</code> key, which specifies the service`s type.
       </p>
       <p>
-         A short example can be found in the <a href="https://github.com/thorinjs/examples/todo-mailer" target="blank">todo-mailer</a>
-         and <a href="https://github.com/thorinjs/examples/todo-app" target="_blank">todo-app</a> example applications.
+         A short example can be found in the <a href="https://github.com/Thorinjs/examples/tree/master/todo-mailer" target="blank">todo-mailer</a>
+         and <a href="https://github.com/Thorinjs/examples/tree/master/todo-app" target="_blank">todo-app</a> example applications.
       </p>
    </div>
 {% endblock %}
